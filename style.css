@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+\
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #2c3e50;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#weather {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+main {
+    z-index: 1;
+    width: 100%;
+    max-width: 600px;
+}
+
+#clock {
+    font-size: 7rem;
+    margin: 0;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+#login-form input, #todo-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 10px;
+    outline: none;
+    width: 80%;
+    transition: border-color 0.3s;
+}
+
+#login-form input::placeholder, #todo-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#login-form input:focus, #todo-form input:focus {
+    border-bottom-color: #ffffff;
+}
+
+#greeting {
+    font-size: 3rem;
+    margin: 20px 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+#todo-form {
+    margin-top: 30px;
+}
+
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 250px;
+    overflow-y: auto; 
+}
+
+#todo-list li {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#todo-list li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+
+#todo-list li button:hover {
+    opacity: 1;
+    color: #ff7675;
+    transform: scale(1.1);
+}
