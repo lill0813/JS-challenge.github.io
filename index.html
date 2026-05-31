@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Momentum Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+
+    <main>
+        <h1 id="clock">00:00:00</h1>
+        
+        <form id="login-form" class="hidden">
+            <input required maxlength="15" type="text" placeholder="이름이 무엇인가요?" />
+        </form>
+        
+        <h2 id="greeting" class="hidden"></h2>
+        
+        <form id="todo-form">
+            <input type="text" placeholder="할 일을 입력하고 Enter를 누르세요" required />
+        </form>
+        
+        <ul id="todo-list"></ul>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
